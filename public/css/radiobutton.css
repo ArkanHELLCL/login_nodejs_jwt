@@ -1,0 +1,382 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@keyframes ripple {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes ripple-teal {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgb(0, 150, 136, 0);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 15px rgb(0, 150, 136, 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 15px rgb(0, 150, 136, 0);
+  }
+}
+@keyframes ripple-lightBlue {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgb(3, 169, 244, 0);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 15px rgb(3, 169, 244, 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 15px rgb(3, 169, 244, 0);
+  }
+}
+@keyframes ripple-green {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgb(76, 175, 80, 0);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 15px rgb(76, 175, 80, 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 15px rgb(76, 175, 80, 0);
+  }
+}
+@keyframes ripple-amber {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgb(255, 193, 7, 0);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 15px rgb(255, 193, 7, 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 15px rgb(255, 193, 7, 0);
+  }
+}
+@keyframes ripple-orange {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgb(255, 152, 0, 0);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 15px rgb(255, 152, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 15px rgb(255, 152, 0, 0);
+  }
+}
+@keyframes ripple-cyan {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgb(0, 188, 212, 0);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 15px rgb(0, 188, 212, 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 15px rgb(0, 188, 212, 0);
+  }
+}
+@keyframes ripple-pink {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgb(233, 30, 99, 0);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 15px rgb(233, 30, 99, 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 15px rgb(233, 30, 99, 0);
+  }
+}
+@keyframes ripple-deepPurple {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgb(103, 58, 183, 0);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 15px rgb(103, 58, 183, 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 15px rgb(103, 58, 183, 0);
+  }
+}
+@keyframes ripple-indigo {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgb(63, 81, 181, 0);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 15px rgb(63, 81, 181, 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 15px rgb(63, 81, 181, 0);
+  }
+}
+@keyframes ripple-red {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgb(244, 67, 54, 0);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 15px rgb(244, 67, 54. 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 15px rgb(244, 67, 54, 0);
+  }
+}
+@keyframes ripple-yellow {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgb(255, 235, 59, 0);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 15px rgb(255, 235, 59, 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 15px rgb(255, 235, 59, 0);
+  }
+}
+@keyframes ripple-lime {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgb(205, 220, 57, 0);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 15px rgb(205, 220, 57, 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 15px rgb(205, 220, 57, 0);
+  }
+}
+@keyframes ripple-brown {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgb(121, 85, 72, 0);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 15px rgb(121, 85, 72, 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 15px rgb(121, 85, 72, 0);
+  }
+}
+
+.radiolabel{
+	padding-right: 20px;	
+}
+.md-radio {
+  /*margin: 16px 0;*/
+}
+.md-radio label{
+	top: 0.5rem;
+}
+.md-radio.md-radio-inline {
+  display: inline-block;
+}
+.md-radio input[type="radio"] {
+  display: none;
+}
+/*.md-radio input[type="radio"]:checked + label:before {
+  border-color: #337ab7;
+  animation: ripple 0.2s linear forwards;
+}*/
+
+.md-radio.radio-teal input[type="radio"]:checked + label:before { 
+  animation: ripple-teal 0.2s linear forwards;
+}
+.md-radio.radio-lightBlue input[type="radio"]:checked + label:before { 
+  animation: ripple-lightBlue 0.2s linear forwards;
+}
+.md-radio.radio-green input[type="radio"]:checked + label:before { 
+  animation: ripple-green 0.2s linear forwards;
+}
+.md-radio.radio-amber input[type="radio"]:checked + label:before { 
+  animation: ripple-amber 0.2s linear forwards;
+}
+.md-radio.radio-orange input[type="radio"]:checked + label:before { 
+  animation: ripple-orange 0.2s linear forwards;
+}
+.md-radio.radio-cyan input[type="radio"]:checked + label:before { 
+  animation: ripple-cyan 0.2s linear forwards;
+}
+.md-radio.radio-pink input[type="radio"]:checked + label:before { 
+  animation: ripple-pink 0.2s linear forwards;
+}
+.md-radio.radio-deepPurple input[type="radio"]:checked + label:before { 
+  animation: ripple-deepPurple 0.2s linear forwards;
+}
+.md-radio.radio-indigo input[type="radio"]:checked + label:before { 
+  animation: ripple-indigo 0.2s linear forwards;
+}
+.md-radio.radio-red input[type="radio"]:checked + label:before { 
+  animation: ripple-red 0.2s linear forwards;
+}
+.md-radio.radio-yellow input[type="radio"]:checked + label:before { 
+  animation: ripple-yellow 0.2s linear forwards;
+}
+.md-radio.radio-lime input[type="radio"]:checked + label:before { 
+  animation: ripple-lime 0.2s linear forwards;
+}
+.md-radio.radio-brown input[type="radio"]:checked + label:before { 
+  animation: ripple-brown 0.2s linear forwards;
+}
+
+
+.md-radio input[type="radio"]:checked + label:after {
+  transform: scale(1);
+}
+.bootstrap .md-radio label, .bootstrap-dark .md-radio label{
+	color: #818181;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: .5px;
+}
+.md-radio label {
+  display: inline-block;
+  min-height: 20px;
+  position: relative;
+  padding: 0 30px;
+  margin-bottom: 0;
+  cursor: pointer;
+  vertical-align: bottom;
+}
+.md-radio label:before, .md-radio label:after {
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  transition: all .3s ease;
+  transition-property: transform, border-color;
+}
+.md-radio label:before {
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  /*border: 2px solid rgba(0, 0, 0, 0.54);*/
+  border: 2px solid #818181;
+}
+.md-radio label:after {
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  transform: scale(0);
+  background: #337ab7;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/*body {
+  background: #f0f0f0;
+  position: absolute;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+}*/
+
+/*section {
+  background: white;
+  margin: 0 auto;
+  padding: 4em;
+  max-width: 800px;
+}*/
+section h1 {
+  margin: 0 0 2em;
+}
+section h3 {
+  margin: 1.5em 0 0;
+}
+
+
+/* ----------------------------------------------------------------------
+  Checkbox Ripple Effect Color - by Ravikumar Chauhan
+------------------------------------------------------------------------- */
+.md-radio.radio-teal label:after{
+  background-color: rgb(0, 150, 136) !important;
+}
+.md-radio.radio-teal label:before{
+  border-color: rgb(0, 150, 136) !important;
+}
+
+.md-radio.radio-lightBlue label:after{
+  background-color: rgb(3, 169, 244) !important;
+}
+.md-radio.radio-lightBlue label:before{
+  border-color: rgb(3, 169, 244) !important;
+}
+
+.md-radio.radio-green label:after{
+  background-color: rgb(76, 175, 80) !important;
+}
+.md-radio.radio-green label:before{
+  border-color: rgb(76, 175, 80) !important;
+}
+
+.md-radio.radio-amber label:after{
+  background-color: rgb(255, 193, 7) !important;
+}
+.md-radio.radio-amber label:before{
+  border-color: rgb(255, 193, 7) !important;
+}
+
+.md-radio.radio-orange label:after{
+  background-color: rgb(255, 152, 0) !important;
+}
+.md-radio.radio-orange label:before{
+  border-color: rgb(255, 152, 0) !important;
+}
+
+.md-radio.radio-cyan label:after{
+  background-color: rgb(0, 188, 212) !important;
+}
+.md-radio.radio-cyan label:before{
+  border-color: rgb(0, 188, 212) !important;
+}
+
+.md-radio.radio-pink label:after{
+  background-color: rgb(233, 30, 99) !important;
+}
+.md-radio.radio-pink label:before{
+  border-color: rgb(233, 30, 99) !important;
+}
+
+.md-radio.radio-deepPurple label:after{
+  background-color: rgb(103, 58, 183) !important;
+}
+.md-radio.radio-deepPurple label:before{
+  border-color: rgb(103, 58, 183) !important;
+}
+
+.md-radio.radio-indigo label:after{
+  background-color: rgb(63, 81, 181) !important;
+}
+.md-radio.radio-indigo label:before{
+  border-color: rgb(63, 81, 181) !important;
+}
+
+.md-radio.radio-red label:after{
+  background-color: rgb(244, 67, 54) !important;
+}
+.md-radio.radio-red label:before{
+  border-color: rgb(244, 67, 54) !important;
+}
+
+.md-radio.radio-yellow label:after{
+  background-color: rgb(255, 235, 59) !important;
+}
+.md-radio.radio-yellow label:before{
+  border-color: rgb(255, 235, 59) !important;
+}
+
+.md-radio.radio-lime label:after{
+  background-color: rgb(205, 220, 57) !important;
+}
+.md-radio.radio-lime label:before{
+  border-color: rgb(205, 220, 57) !important;
+}
+
+.md-radio.radio-brown label:after{
+  background-color: rgb(121, 85, 72) !important;
+}
+.md-radio.radio-brown label:before{
+  border-color: rgb(121, 85, 72) !important;
+}

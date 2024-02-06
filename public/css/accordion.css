@@ -1,0 +1,37 @@
+/* accordion starting stylings ------------------------------*/
+.accordion i{
+	position: absolute;
+	right: 30px;
+	transition: all 0.35s linear;
+	transform-style: preserve-3d;
+}
+
+.btn-link.collapsed i{
+	 -moz-transform: rotate(-180deg);
+     -o-transform: rotate(-180deg);
+     -webkit-transform: rotate(-180deg);
+     transform: rotate(-180deg);
+}
+.accordion .content{
+	transition: all 0.35s linear 0s;
+}
+.btn-link{
+	text-decoration: none!important;
+}
+
+h5, h5 .btn-link{
+	color: #757575!important;
+}
+
+.accordion {
+    -o-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    -ms-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.accordion .card{
+	border: none!important;
+	border-bottom: 1px solid #9e9e9e!important;
+}

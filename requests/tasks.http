@@ -1,0 +1,12 @@
+###
+GET https://www.ds6nodejs.gob.cl:4430
+###
+GET 
+###
+POST https://www.ds6nodejs.gob.cl:4430/login
+Content-Type: : application/json
+
+{
+    "USR_Cod" : "lcastillo",
+    "USR_Pass" : "Josefina123"
+}

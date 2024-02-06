@@ -1,0 +1,167 @@
+
+.select-text {
+	position: relative;
+	font-family: inherit;
+	background-color: transparent!important;
+	width: 100%;		
+	border-radius: 0;
+	border: none;
+	border-bottom: 1px solid #ced4da;
+
+}
+
+/* Remove focus */
+.select-text:focus{
+	outline: none!important;
+	border-bottom: 1px solid rgba(0,0,0, 0);			
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+	/*padding-bottom: 0.9rem !important;*/
+}
+
+.select-text.is-valid:focus, .select-text.is-invalid:focus{
+	outline: none!important;	
+    outline-width: 0 !important;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+	/* Use custom arrow */
+.select .select-text {
+	appearance: none;
+	-webkit-appearance:none
+}
+
+.select:after {
+	position: absolute;
+	top: 18px;
+	/*right: 40px;*/
+	/*Revisar que pasa con este cambio*/
+	right: 25px;
+	/* Styling the down arrow */
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #757575;
+	pointer-events: none;
+}
+
+/* LABEL ======================================= */
+.select-label {
+	color: #757575;
+	font-size: 1rem;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 0;
+	top: 10px;
+	transition: 0.4s ease all !important;
+}
+.invalid-feedback.textarea{
+	bottom: -1.5rem;
+	top: auto;
+}
+/* active state */
+.select-text:focus ~ .select-label, .select-text:valid ~ .select-label {
+	color: #757575;
+	top: -22px;
+	transition: 0.4s ease all;
+	font-size: 13px;
+}
+
+.select-text:focus ~ .invalid-feedback, .select-text:valid ~ .invalid-feedback {
+	/*top: 4.5rem;*/
+	transition: 0.4s ease all;
+}
+select{
+	padding-bottom: .4rem !important;
+	margin-bottom: 0rem !important;
+}
+.md-form select.form-control.is-invalid:focus, .md-form select.form-control.is-valid:focus {    
+    border: none;
+	box-shadow: 0 0 0 0 transparent !important;	
+}
+
+/* BOTTOM BARS ================================= */
+.select-bar {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.select-bar:before, .select-bar:after {
+	content: '';
+	height: 2px;
+	width: 0;
+	/*bottom: 7px;*/
+	bottom: -1px;
+	position: absolute;
+	background: #2F80ED;
+	transition: 0.4s ease all;
+}
+
+.select-bar:before {
+	left: 50%;
+}
+
+.select-bar.is-invalid:before, .select-bar.is-invalid:after {
+	background: #f44336!important;
+}
+
+.select-bar.is-valid:before, .select-bar.is-valid:after {
+	background: #00c851!important;
+}
+
+.select-bar:after {
+	right: 50%;
+}
+
+/* active state */
+.select-text:focus ~ .select-bar:before, .select-text:focus ~ .select-bar:after {
+	width: 50%;
+}
+
+.select-text:focus ~ i:before{
+	color:#2F80ED;
+}
+
+/* HIGHLIGHTER ================================== */
+.select-highlight {
+	position: absolute;
+	height: 60%;
+	width: 100px;
+	top: 25%;
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+/*dark moed*/
+.bootstrap-dark select, .bootstrap-dark option{	
+	background: rgba(92,92,92,0.9);
+	color: #dee2e6;
+}
+.bootstrap-dark optgroup{	
+	background: rgba(92,92,92,0.9);
+	color:#343434;
+}
+select {
+	margin: 0 0.5rem;
+}
+
+select ~ .error.invalid-feedback{
+	top:2.3rem;
+}
+
+input[type="text"]:focus ~ label, input[type="password"]:focus ~ label,
+input[type="email"]:focus ~ label,input[type="url"]:focus ~ label,input[type="tel"]:focus ~ label,input[type="number"]:focus ~ label,input[type="search"]:focus ~ label,input[type="search-md"]:focus ~ label
+{
+	-webkit-transform: translateY(-14px) scale(0.8);
+    transform: translateY(-14px) scale(0.8);
+	font-size: 1rem;
+}

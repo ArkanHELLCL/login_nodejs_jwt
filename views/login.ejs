@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>Login con Node + JWT + MySql</title>
+
+    <!-- Bootstrap core CSS -->    
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-theme">
+    <link href="css/mdb.min.css" rel="stylesheet">    
+    <link href="fonts/fontawezome/css/all.min.css" rel="stylesheet">
+    <link href="css/transitions.css?v1.0" rel="stylesheet">
+    <link href="css/select.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet" media="(prefers-reduced-motion: no-preference)">
+    
+    <link href="css/sweetalert2.css" rel="stylesheet">
+    <link href="css/sweetalert2-wait.css" rel="stylesheet">
+           
+    <!-- Custom styles for this template -->    
+    <link href="css/style.css" rel="stylesheet">    
+    <link href="css/signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center justify-content-center">
+    <!-- form container -->
+    <div class="form-container" id="form-flipped">
+        <!-- form login -->
+        <div class="form-login">
+            <!-- Table with panel -->					
+            <div class="card card-cascade narrower">
+                <!--Card image-->
+                <div class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-center align-items-center">						
+                    <div class="text-left">Ingresa tus</div>
+                    <div id="UsrPhoto"></div>
+                    <div class="text-right">Credenciales</div>					
+                </div>
+                <!--/Card image-->
+
+                <form role="form" action="/login" method="POST" name="login" id="login" class="form-signin" novalidate="true">
+                    <div>
+                        
+                        <div>					
+                            <div class="md-form" style="text-align:initial;">
+                                <div class="error-message input-field">						
+                                    <i class="material-icons prefix">account_circle</i>							
+                                    <input type="text" id="USR_Cod" name="USR_Cod" class="form-control required vv-control" autofocus autocomplete="false" data-message-error="Debes ingresar tu usuario">
+                                    <span class="select-bar"></span>
+                                    <label for="USR_Cod">Usuario</label>							
+                                </div>						
+                            </div>                            
+                            <div class="md-form " style="text-align:initial;">
+                                <div class="error-message input-field">
+                                    <i class="material-icons prefix">vpn_key</i>										
+                                    <input type="password" id="USR_Pass" name="USR_Pass" class="form-control required vv-control" autocomplete="current-password" data-message-error="Debes ingresar tu clave">
+                                    <i class="far fa-eye-slash viewpass" data-key="USR_Pass"></i>
+                                    <span class="select-bar"></span>
+                                    <label for="USR_Pass">Contraseña</label>							
+                                </div>						
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="text-primary toggle animate__animated animate__slideInRight" tabindex="-2" style="float:right;" id="forgot">¿Olvidaste tu clave?</a>
+                    <br/>
+                    <button class="btn btn-primary animated waves-effect" type="submit"><i class="fas fa-sign-in-alt"></i> Ingresar</button>				
+                    <div class="card-footer text-muted text-center mt-4">			  
+                        <p class="text-muted animate__animated animate__zoomIn" id="copyright">Sistema Diálogo Social v6.0 2022<br/>Subsecretaría del Trabajo</p>
+                        <div class="bicolor bottom animate__animated animate__slideInUp">
+                            <span class="azul"></span>
+                            <span class="rojo"></span>
+                        </div>
+                    </div>
+
+                </form>			  	
+            </div>
+            <!-- Table with panel -->
+        </div>
+        <!-- form login -->
+        
+        <!-- form forgot -->
+        <div class="form-forgot">
+            <!-- Table with panel -->					
+            <div class="card card-cascade narrower">
+                <!--Card image-->
+                <div class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-center align-items-center">						
+                    <div class="text-left">Ingresa tu Correo</div>						
+                </div>
+                <!--/Card image-->
+
+                <form role="form" action="/forgot-password" method="POST" name="forgot-pass" id="forgot-pass" class="form-signin needs-validation">			
+                    <div>							
+                        <div>					
+                            <div class="md-form " style="text-align:initial;">
+                                <div class="error-message input-field">						
+                                    <i class="material-icons prefix">mail</i>							
+                                    <input type="email" id="USR_Mail" name="USR_Mail" class="form-control required vv-control email" data-message-error="Debes ingresar tu correo">
+                                    <span class="select-bar"></span>
+                                    <label for="USR_Mail">Correo</label>							
+                                </div>						
+                            </div>							
+                        </div>
+                        <a href="#" class="text-primary toggle" tabindex="-2" style="float:right;" id="forgot2"><i class="fas fa-undo"></i> Voler</a>
+                        <br/>
+                        <button class="btn btn-primary animated waves-effect" type="submit"><i class="fas fa-paper-plane"></i> Solicitar</button>				
+                        <div class="card-footer text-muted text-center mt-4">			  
+                            <p class="text-muted" id="copyright3">Sistema Diálogo Social v5.0 2020<br/>Subsecretaría del Trabajo</p>
+                            <div class="bicolor bottom ">
+                                <span class="azul"></span>
+                                <span class="rojo"></span>
+                            </div>
+                        </div>
+                    </div>
+                </form>			  	
+            </div>
+            <!-- Table with panel -->
+        </div>
+        <!-- form forgot -->
+        
+        <!-- form newpass -->
+        <div class="form-newpass">
+            <!-- Table with panel -->					
+            <div class="card card-cascade narrower">
+                <!--Card image-->
+                <div class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-center align-items-center">						
+                    <div class="text-left">Cambia tu Clave</div>						
+                </div>
+                <!--/Card image-->
+
+                <form role="form" action="/change-password" method="POST" name="new-pass" id="new-pass" class="form-signin needs-validation">			
+                    <div>							
+                        <div>					
+                            <div class="md-form" style="text-align:initial;">
+                                <div class="error-message input-field">						
+                                    <i class="material-icons prefix">vpn_key</i>										
+                                    <input type="password" id="inputPassword" name="inputPassword" class="form-control custom-validate" autocomplete="new-password" data-validate-key="compareOldPass">
+                                    <i class="far fa-eye-slash viewpass" data-key="inputPassword"></i>
+                                    <span class="select-bar"></span>
+                                    <label for="inputPassword">Nueva Clave</label>							
+                                </div>						
+                            </div>							
+                            
+                            <div class="md-form" style="text-align:initial;">
+                                <div class="error-message input-field">						
+                                    <i class="material-icons prefix">vpn_key</i>										
+                                    <input type="password" id="inputPasswordConfirm" name="inputPasswordConfirm" class="form-control custom-validate" autocomplete="new-password" data-validate-key="confirmPass">
+                                    <i class="far fa-eye-slash viewpass" data-key="inputPasswordConfirm"></i>
+                                    <span class="select-bar"></span>
+                                    <label for="inputPasswordConfirm">Repetir Clave</label>							
+                                </div>						
+                            </div>
+                        </div>
+                        <a href="#" class="text-primary toggle2" tabindex="-2" style="float:right;" id="forgot3"><i class="fas fa-undo"></i> Voler</a>
+                        <br/>
+                        <button class="btn btn-primary animated waves-effect" type="submit"><i class="fas fa-exchange-alt"></i> Cambiar</button>				
+                        <div class="card-footer text-muted text-center mt-4">			  
+                            <p class="text-muted" id="copyright3">Sistema Diálogo Social v5.0 2020<br/>Subsecretaría del Trabajo</p>
+                            <div class="bicolor bottom ">
+                                <span class="azul"></span>
+                                <span class="rojo"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" id="usr_cod2" name="usr_cod2" value="">
+                    <input type="hidden" id="usr_pass2" name="usr_pass2" value="">
+                </form>			  	
+            </div>
+            <!-- Table with panel -->
+        </div>
+        <!-- form newpass -->
+        
+    </div>
+    <!-- form container -->
+    <script src='js/vanilla-validator.concat.min.js'></script>    
+    <script src="js/sweetalert2.js"></script>
+    <script src="js/sweetalert2-wait.js"></script>
+
+    <script src="js/signin.js"></script>    
+    <style>
+        body.swal2-height-auto {
+            height: inherit !important;
+        }
+    </style>
+  </body>
+</html>
