@@ -397,8 +397,8 @@ const usrPhoto = async(req, res) => {
         
             resx.on('searchEntry', function(entry){                
                 const file = entry.object?.thumbnailPhoto;
-                if(file!=undefined){
-                    const imgbase64 = getProperObject(entry).thumbnailPhoto
+                const imgbase64 = getProperObject(entry).thumbnailPhoto
+                if(imgbase64!==undefined){                    
                     //const imgbase64 = getProperObject(entry).thumbnailPhoto.toString('base64')
 
                     res.set({
@@ -406,7 +406,9 @@ const usrPhoto = async(req, res) => {
                         'Content-Length': imgbase64.length
                     });
                     res.send(imgbase64);
-                }                
+                }else{
+                    res.send(null)
+                }
                 return
             });
             resx.on('searchReference', function(referral) {

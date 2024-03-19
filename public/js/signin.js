@@ -132,10 +132,13 @@ function usrPhoto(){
         })
         .then(imgBlob => {                        
             var reader = new FileReader();
-            reader.readAsDataURL(imgBlob); 
-            reader.onloadend = function() {
-                var base64data = reader.result;                
-                document.getElementById("UsrPhoto").innerHTML = "<img src='" + base64data + "'>"
+            console.log(imgBlob)
+            if(imgBlob.size>0){
+                reader.readAsDataURL(imgBlob); 
+                reader.onloadend = function() {                
+                    var base64data = reader.result;
+                    document.getElementById("UsrPhoto").innerHTML = "<img src='" + base64data + "'>"                
+                }
             }
         })
         .catch((err)=> {
