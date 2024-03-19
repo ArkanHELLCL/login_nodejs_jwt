@@ -137,8 +137,10 @@ function usrPhoto(){
                 reader.readAsDataURL(imgBlob); 
                 reader.onloadend = function() {                
                     var base64data = reader.result;
-                    document.getElementById("UsrPhoto").innerHTML = "<img src='" + base64data + "'>"                
+                    document.getElementById("UsrPhoto").innerHTML = "<img src='" + base64data + "'>"
                 }
+            }else{
+                document.getElementById("UsrPhoto").innerHTML = "<img src='./img/usericon.png'>"
             }
         })
         .catch((err)=> {
