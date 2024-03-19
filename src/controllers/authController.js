@@ -74,7 +74,7 @@ function getProperObject(entry) {
       var buf = a.buffers;
       var val = a.vals;
       var item;
-      if ( a.type == 'thumbnailPhoto' )
+      if ( a?.type === 'thumbnailPhoto' )
         item = buf;
       else
         item = val;
@@ -396,15 +396,17 @@ const usrPhoto = async(req, res) => {
             //console.log(err);
         
             resx.on('searchEntry', function(entry){                
-                const file = entry.object.thumbnailPhoto;                                
-                const imgbase64 = getProperObject(entry).thumbnailPhoto
-                //const imgbase64 = getProperObject(entry).thumbnailPhoto.toString('base64')
+                const file = entry.object?.thumbnailPhoto;
+                if(file!=undefined){
+                    const imgbase64 = getProperObject(entry).thumbnailPhoto
+                    //const imgbase64 = getProperObject(entry).thumbnailPhoto.toString('base64')
 
-                res.set({
-                    'Content-Type': 'image/jpg',
-                    'Content-Length': imgbase64.length
-                });
-                res.send(imgbase64);
+                    res.set({
+                        'Content-Type': 'image/jpg',
+                        'Content-Length': imgbase64.length
+                    });
+                    res.send(imgbase64);
+                }                
                 return
             });
             resx.on('searchReference', function(referral) {

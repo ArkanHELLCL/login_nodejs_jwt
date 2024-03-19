@@ -1,4 +1,6 @@
 import sql from 'mssql/msnodesqlv8.js'
+//import sql from 'mssql'
+//import sql from 'msnodesqlv8'
 import dotenv from 'dotenv'
 //const path = require('path');
 import path from 'path'
