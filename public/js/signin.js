@@ -131,8 +131,7 @@ function usrPhoto(){
             }
         })
         .then(imgBlob => {                        
-            var reader = new FileReader();
-            console.log(imgBlob)
+            var reader = new FileReader();            
             if(imgBlob.size>0){
                 reader.readAsDataURL(imgBlob); 
                 reader.onloadend = function() {                
