@@ -72,7 +72,7 @@ function getProperObject(entry) {
     };
     entry.attributes.forEach(function (a) {
       var buf = a.buffers;
-      var val = a.vals;
+      var val = a.values;
       var item;
       if ( a?.type === 'thumbnailPhoto' )
         item = buf;
