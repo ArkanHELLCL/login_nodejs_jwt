@@ -71,7 +71,7 @@ app.use((req, res, next) => {
     next();
 })
 //setting
-app.set('port', process.env.PORT || 3000)
+app.set('port', process.env.PORT || 3500)
 
 //para activar el socket se debe levantar el servidor desde server no de app https://www.npmjs.com/package/socket.io
 //server.listen(app.get('port'),'127.0.0.1', () => {

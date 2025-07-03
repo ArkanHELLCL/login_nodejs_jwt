@@ -302,7 +302,7 @@ const forgotPassword = async (req, res) => {
 
         const pass = resultPass.recordset[0].Pass
         const passHash = await bcryptjs.hash(pass,8)
-
+        
         //Cambiando clave
         const resultUser = await pool 
             .request()
